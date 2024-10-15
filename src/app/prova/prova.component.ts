@@ -19,17 +19,5 @@ export class ProvaComponent implements OnInit {
 
   ngOnInit(): void {
     console.log("ngOnInit")
-
-    let counter = 0
-
-    setInterval(() => {
-      if (counter % 2 == 0) {
-        this.immagine = this.immagine1
-      } else {
-        this.immagine = this.immagine2
-      }
-      counter++
-    }, 2000);
   }
-
 }

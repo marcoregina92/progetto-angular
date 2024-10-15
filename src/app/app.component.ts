@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'progetto-angular';
+
+  onInput(e: Event) {
+    console.log((<HTMLInputElement>e.target).value)
+  }
 }
