@@ -8,7 +8,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'progetto-angular';
 
-  isVisible = true
+  isVisible = true;
+
+  persone = [
+    { nome: "Luca", cognome: "Rossi", isOnline: true },
+    { nome: "Marco", cognome: "Verdi", isOnline: true },
+    { nome: "Anna", cognome: "Neri", isOnline: false },
+    { nome: "Elena", cognome: "Luce", isOnline: true }
+  ]
 
   onInput(e: Event) {
     this.title = ((<HTMLInputElement>e.target).value)
