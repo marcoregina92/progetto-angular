@@ -5,4 +5,12 @@
     <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
 </mat-form-field>
 
-<p>{{title}}</p>
+<div *ngIf="isVisible; then bloccoIf else bloccoElse"></div>
+
+<ng-template #bloccoIf>
+    <div> sono visibile </div>
+</ng-template>
+
+<ng-template #bloccoElse>
+    <div> non sono visibile </div>
+</ng-template>
