@@ -1,36 +1,35 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { count } from 'rxjs';
 
 @Component({
   selector: 'app-prova',
   templateUrl: './prova.component.html',
   styleUrl: './prova.component.css'
 })
-export class ProvaComponent implements OnInit, AfterContentChecked,
-  AfterContentInit, AfterViewChecked, AfterViewInit, DoCheck, OnDestroy {
+export class ProvaComponent implements OnInit {
+
+  isDisabled = false;
+  immagine = ''
+  immagine1 = 'https://www.polivet.it/wp-content/uploads/2019/09/Senza-titolo-1-2.jpg'
+  immagine2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
 
   constructor() {
     console.log("costruttore")
   }
-  ngAfterContentChecked(): void {
-    console.log("ngAfterContentChecked")
-  }
-  ngAfterContentInit(): void {
-    console.log("ngAfterContentInit")
-  }
-  ngAfterViewChecked(): void {
-    console.log("ngAfterViewChecked")
-  }
-  ngAfterViewInit(): void {
-    console.log("ngAfterViewInit")
-  }
-  ngDoCheck(): void {
-    console.log("ngDoCheck")
-  }
-  ngOnDestroy(): void {
-    console.log("ngOnDestroy")
-  }
+
   ngOnInit(): void {
     console.log("ngOnInit")
+
+    let counter = 0
+
+    setInterval(() => {
+      if (counter % 2 == 0) {
+        this.immagine = this.immagine1
+      } else {
+        this.immagine = this.immagine2
+      }
+      counter++
+    }, 2000);
   }
 
 }
