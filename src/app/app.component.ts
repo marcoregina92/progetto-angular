@@ -8,8 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'progetto-angular';
 
-  isVisible = true;
-
   persone = [
     { nome: "Luca", cognome: "Rossi", isOnline: true },
     { nome: "Marco", cognome: "Verdi", isOnline: true },
@@ -25,3 +23,6 @@ export class AppComponent {
     this.title = "Ho cliccato sul button"
   }
 }
+
+
+
