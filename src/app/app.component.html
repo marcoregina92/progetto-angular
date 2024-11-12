@@ -1,20 +1,3 @@
-<!-- <button mat-raised-button color="primary" (click)="onClick($event)">Primary</button>
+<p>{{persone[0].nome}}</p>
 
-<mat-form-field class="example-full-width">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
-</mat-form-field> -->
-
-
-<!-- <div *ngFor="let persona of persone">
-    {{ persona.nome }} - {{ persona.cognome }}
-    <p class="cerchioVerde" *ngIf="persona.isOnline"></p>
-    <p class="cerchioRosso" *ngIf="!persona.isOnline"></p>
-</div> -->
-
-<ul>
-    <li *ngFor="let persona of persone">
-        <div class="cerchio" [ngStyle]="{'background': persona.isOnline ? 'green' : 'red'}"></div>
-        <p>{{ persona.nome }} {{ persona.cognome }}</p>
-    </li>
-</ul>
+<app-prova [data]="persone"></app-prova>

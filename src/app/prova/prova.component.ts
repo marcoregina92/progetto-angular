@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { count } from 'rxjs';
 
 @Component({
@@ -7,17 +7,11 @@ import { count } from 'rxjs';
   styleUrl: './prova.component.css'
 })
 export class ProvaComponent implements OnInit {
+  @Input() data: any;
 
-  isDisabled = false;
-  immagine = ''
-  immagine1 = 'https://www.polivet.it/wp-content/uploads/2019/09/Senza-titolo-1-2.jpg'
-  immagine2 = 'https://material.angular.io/assets/img/examples/shiba2.jpg';
-
-  constructor() {
-    console.log("costruttore")
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    console.log("ngOnInit")
+    console.log(this.data)
   }
 }

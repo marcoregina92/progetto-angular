@@ -14,14 +14,6 @@ export class AppComponent {
     { nome: "Anna", cognome: "Neri", isOnline: false },
     { nome: "Elena", cognome: "Luce", isOnline: true }
   ]
-
-  onInput(e: Event) {
-    this.title = ((<HTMLInputElement>e.target).value)
-  }
-
-  onClick(event: Event) {
-    this.title = "Ho cliccato sul button"
-  }
 }
 
 
